@@ -1,166 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="Pp.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="Pp.css">
 </head>
+
 <body>
-   <header class="header">
+  <!------------------ Header Section ---------------------->
+  <header class="header">
     <a href="#" class="logo">Upasana</a>
     <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#home">About</a>
-        <a href="#home">Skills</a>
-        <a href="#home">Services</a>
-        <a href="#home">Portfolio</a>
-         <a href="#home">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#portfolios">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
-   </header>
+  </header>
 
-   <section class="home" id="home">
-   <div class="home-content">
-    <div class="img">
-      <img src="C:\Users\upasa\Downloads\Upasana.png" alt="">
+  <!------------------ Home Section ---------------------->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="img">
+        <img src="C:\Users\upasa\Downloads\Upasana.png" alt="">
+      </div>
+      <h1>Hello<span>.</span></h1>
+      <h1><span>I'm </span>Upasana Chaulagain</h1>
+      <h3><span> Frontend Developer</span></h3>
+
+      <a href="#" class="btn">Download CV</a>
     </div>
-    <h1>Hello<span>.</span></h1>
-  <h1><span>I'm </span>Upasana Chaulagain</h1>
-  <h3><span> Frontend Developer</span></h3>
-
-  <a href="#" class="btn">Download CV</a>
-  
   </section>
+
+  <!------------------ About Section ---------------------->
   <section class="about" id="about">
     <div class="about-img">
       <img src="C:\Users\upasa\Downloads\Upasana.png" alt="">
     </div>
 
-  <div class="aboutme">
-    <h2 class="heading">About <span>Me</span></h2>
-    <h3>Frontend developer</h3>
-    <p>I am web developer. I have great passion for designing and
-       developing websites. I am currently Bachelor 4th semester IT Student. I have acquired the skills
-      necessary to build great and premium websites. I can make website more interactive and user friendly. 
-      I make Responsive designs which makes your website accessible to all users, regardless their device.</p>
+    <div class="aboutme">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Frontend developer</h3>
+      <p>I am web developer. I have great passion for designing and
+        developing websites. I am currently Bachelor 4th semester IT Student. I have acquired the skills
+        necessary to build great and premium websites. I can make website more interactive and user friendly.
+        I make Responsive designs which makes your website accessible to all users, regardless their device.</p>
       <div class="people-icon">
-        <i class="fa fa-user" style="font-size:36px;color:aqua"></i>
-<br>
-
-       
-
-     
-     <a href="#" class="btn">Read More</a>
-  </div>
+        <!-- <i class="fa fa-user" style="font-size:36px;color:aqua"></i> -->
+        <br>
+        <a href="#" class="btn">Read More</a>
+      </div>
   </section>
-  <section class="Skills" id="Skills">
+
+  <!------------------ Skills Section ---------------------->
+  <section class="skills" id="skills">
     <div class="skill"></div>
     <h2 class="heading">My Coding <span>Skills</span></h2>
 
-   <li><h3>Html</h3>
-   <span class="bar"><span class="html"></span></span>
-   </li>
-   
-   <li><h3>Css</h3>
-    <span class="bar"><span class="css"></span></span>
+    <li>
+      <h3>Html</h3>
+      <span class="bar"><span class="html"></span></span>
     </li>
 
-    
-   <li><h3>Javascript</h3>
-    <span class="bar"><span class="javascript"></span></span>
+    <li>
+      <h3>Css</h3>
+      <span class="bar"><span class="css"></span></span>
     </li>
 
-    
-   <li><h3>Php</h3>
-    <span class="bar"><span class="php"></span></span>
+    <li>
+      <h3>Javascript</h3>
+      <span class="bar"><span class="javascript"></span></span>
     </li>
 
-    <li><h3>Reactjs</h3>
+    <li>
+      <h3>Php</h3>
+      <span class="bar"><span class="php"></span></span>
+    </li>
+
+    <li>
+      <h3>Reactjs</h3>
       <span class="bar"><span class="reactjs"></span></span>
-      </li>
-   
+    </li>
+
     </div>
 
   </section>
 
+  <!------------------ Services Section ---------------------->
   <section class="services" id="services">
     <h2 class="heading">My <span>Services</span></h2>
 
     <div class="services-container">
       <div class="services-box">
-    <i class='bx bx-code-alt'></i>
-    <h3>Web Development</h3>
-    <p>I help to create best website</p>
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Development</h3>
+        <p>I help to create best website</p>
         <a href="#" class="btn">Read More</a>
-        </div>
-       
-   
-    <div class="services-box">
-    <i class='bx bx-paint'></i>
-    <h3>Graphic Design</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam nemo? Magni totam, animi voluptatem pariatur voluptates, 
-      facilis modi officiis odio, reprehenderit doloremque possimus. Veritatis laborum possimus dolor nobis asperiores.</p>
-      <a href="#" class="btn">Read More</a>
-  
-   </div>
+      </div>
 
-   <div class="services-box">
-    <i class='bx bx-desktop'></i>
-    <h3>Responsive Web Design</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam nemo? Magni totam, animi voluptatem pariatur voluptates, 
-      facilis modi officiis odio, reprehenderit doloremque possimus. Veritatis laborum possimus dolor nobis asperiores.</p>
-      <a href="#" class="btn">Read More</a>
-  <script src="js/leo.js"></script>
-   </div>
-   <section class="portfolio" id="portfolios">
+      <div class="services-box">
+        <i class='bx bx-paint'></i>
+        <h3>Graphic Design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam nemo? Magni totam, animi voluptatem
+          pariatur voluptates,
+          facilis modi officiis odio, reprehenderit doloremque possimus. Veritatis laborum possimus dolor nobis
+          asperiores.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+        <i class='bx bx-desktop'></i>
+        <h3>Responsive Web Design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam nemo? Magni totam, animi voluptatem
+          pariatur voluptates,
+          facilis modi officiis odio, reprehenderit doloremque possimus. Veritatis laborum possimus dolor nobis
+          asperiores.</p>
+        <a href="#" class="btn">Read More</a>
+        <script src="js/leo.js"></script>
+      </div>
+
+  </section>
+
+  <!----------------- Portfolio Section --------------------->
+  <section class="portfolio" id="portfolios">
     <h2 class="heading">Latest <span>Project</span></h2>
     <div class="portfolio-container">
       <img src=" " alt=" ">
       <div class="portfolio-layers">
         <h4>Weather App</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, voluptatem. Id, dolore? Aperiam consectetur corrupti tenetur
-           saepe dolore ea esse ratione pariatur, facilis ipsa praesentium reiciendis repellat earum alias cupiditate!</p>
-           <a href="#"><i class='bx bx-link-external'></i></a>
-           
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, voluptatem. Id, dolore? Aperiam
+          consectetur corrupti tenetur
+          saepe dolore ea esse ratione pariatur, facilis ipsa praesentium reiciendis repellat earum alias
+          cupiditate!</p>
+        <a href="#"><i class='bx bx-link-external'></i></a>
+
       </div>
     </div>
-   </section>
-   <section class="contact" id="contact">
-    <h2 class="heading">Contact<span> Me!</span></h2> 
+  </section>
+
+  <!------------------ Contact Section ---------------------->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact<span> Me!</span></h2>
 
     <form action="#">
       <div class="input-box">
         <input type="text" placeholder="Full Name">
         <input type="email" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-          <input type="number" placeholder="Mobile Number">
-          <input type="text" placeholder="Email Subject">
-          </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Mobile Number">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
     </form>
-   </section>
+  </section>
 
-   <footer class="footer">
+  <!------------------ Footer Section ---------------------->
+  <footer class="footer">
     <div class="footer-text">
       <p>Copyright &copyright; 2023 by Upasana | All rights are Reserved.</p>
-  
-    </div>
-  
-   </div>
-   <div class="footer-icon">
-    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-   </div>
 
-   </section>
+    </div>
+
+    </div>
+    <div class="footer-icon">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+
+    </section>
   </footer>
-  <script src="js/leo.js"></script>
-   </body>
-   </html>
-  
-    
+
+  <script src="leo.js"></script>
+</body>
+
+</html>
