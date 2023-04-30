@@ -9,7 +9,6 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-
 }
 
 :root {
@@ -17,6 +16,11 @@
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
+    --html: 90%;
+    --css: 80%;
+    --javascript: 60%;
+    --php: 50%;
+    --reactjs: 40%;
 }
 
 html {
@@ -27,6 +31,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -88,8 +93,6 @@ section {
 
 img {
     display: block;
-    /* margin-left: auto;
-    margin-right: auto; */
     align-items: center;
     height: 200px;
     width: 200px;
@@ -118,11 +121,6 @@ img {
     font-weight: 700;
     line-height: 1.3;
 }
-
-/* .home-content h3: nyth-of-type(2) {
-    margin-bottom: 2rem;
-
-} */
 
 span {
     color: var(--main-color);
@@ -172,20 +170,17 @@ span {
 }
 
 .aboutme h2 {
-    /* text-align: left; */
     line-height: 1.3;
 }
 
 .aboutme h3 {
     font-size: 2.6rem;
-
 }
 
 .aboutme p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
-
 
 h1 {
     text-align: center;
@@ -230,79 +225,37 @@ h3 {
     float: left;
     background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
 }
+.skills li h3 span{
+    text-align: right;
+}
 
+.html, .css, .javascript, .php, .reactjs {
+    animation: skills 3s;
+    animation-play-state: paused;
+}
 .html {
-    width: 90%;
-    animation: html 3s;
+    width: var(--html);
 }
 
 .css {
-    width: 80%;
-    animation: css 3s;
+    width: var(--css);
 }
 
 .javascript {
-    width: 60%;
-    animation: javascript 3s;
+    width: var(--javascript);
 }
 
 .php {
-    width: 50%;
-    animation: php 3s;
+    width: var(--php);
 }
 
 .reactjs {
-    width: 40%;
-    animation: reactjs 3s;
+    width: var(--reactjs);
 }
 
-@keyframes html {
+@keyframes skills{
     0% {
         width: 0%;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes css {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 80%;
-    }
-}
-
-@keyframes javascript {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 60%;
-    }
-}
-
-@keyframes php {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 50%;
-    }
-}
-
-@keyframes reactjs {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 40%;
     }
 }
 
@@ -397,23 +350,26 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
     padding: 2rem 9%;
     background: var(--second-bg-color);
-
 }
 
 .footer-text p {
     font-size: 1.6rem;
 }
 
+.footer-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+}
+
 .footer-icon a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* padding: 1rem; */
     background: var(--main-color);
-    /* border-radius: .8rem; */
     border-radius: 50%;
     transition: .5s ease;
 }
@@ -423,7 +379,8 @@ h3 {
 }
 
 .footer-icon a i {
-    font-size: 2.4rem;
+    padding: .5rem;
+    font-size: 2.6rem;
     color: var(--second-bg-color);
 }
 
@@ -463,7 +420,8 @@ h3 {
         display: none;
     }
 
-    .active {
+    .mobilenavbar {
+        background-color: #dcdcdc;
         display: block;
     }
 

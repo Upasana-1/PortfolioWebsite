@@ -1,30 +1,69 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menuIcon.onclick = () => {
-    // menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+// query selector function
+const select = (element, all = false) => {
+    element = element.trim()
+    if (all) {
+        return [...document.querySelectorAll(element)]
+    } else {
+        return document.querySelector(element)
+    }
 }
 
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header navbar a');
+const navbar = select('.navbar');
+
+document.addEventListener("click", event => {
+    const el = event.target;
+    if (el.id === "menu-icon") {
+        navbar.classList.toggle('mobilenavbar');
+    } else if (el !== navbar){
+        navbar.classList.remove("mobilenavbar");
+    }
+});
+
+// get skill bars
+const bar = select('.bar', true);
+// get navbar links
+let navbarlinks = select('.navbar a', true);
+// get up arrow 
+const upArrow = select('.footer-icon');
 
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    navbarlinksActive();
+    controlSkillsAnimation();
+    upArrowDisplay();
+    if (navbar.classList.contains("mobilenavbar")){
+        navbar.classList.remove("mobilenavbar");
+    }
+}
 
-        if (top >= offset && top < offset + height) {
-            navlinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
+function upArrowDisplay() {
+    if (window.scrollY > 100) {
+        upArrow.style.display = "flex";
+    } else {
+        upArrow.style.display = "none";
+    }
+}
+
+function navbarlinksActive() {
+    let position = window.scrollY + 200
+    navbarlinks.forEach(navbarlink => {
+        if (!navbarlink.hash) return
+        let section = select(navbarlink.hash)
+
+        if (!section) return
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+            navbarlink.classList.add('active')
+        } else {
+            navbarlink.classList.remove('active')
+        }
     })
-};
+}
 
-let header = document.querySelector
-
-
+function controlSkillsAnimation() {
+    bar.forEach(element => {
+        const skill = element.firstElementChild.getAttribute("class");
+        const leng = select(`.${skill}`);
+        if (window.innerHeight + window.scrollY >= leng.offsetTop) {
+            leng.style.animationPlayState = "running";
+        }
+    });
+}
