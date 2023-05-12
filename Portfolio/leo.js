@@ -9,14 +9,19 @@ const select = (element, all = false) => {
 }
 
 const navbar = select('.navbar');
+const cross = select('.close');
+const menu = select('#menu-icon');
 
 document.addEventListener("click", event => {
     const el = event.target;
-    if (el.id === "menu-icon") {
+    if (el.id === "menu-icon" || el === cross) {
         navbar.classList.toggle('mobilenavbar');
-    } else if (el !== navbar){
-        navbar.classList.remove("mobilenavbar");
+        cross.classList.toggle('show');
     }
+    // else if (el !== navbar){
+    //     navbar.classList.remove("mobilenavbar");
+    //     cross.classList.remove('show');
+    // }
 });
 
 // get skill bars
@@ -30,9 +35,10 @@ window.onscroll = () => {
     navbarlinksActive();
     controlSkillsAnimation();
     upArrowDisplay();
-    if (navbar.classList.contains("mobilenavbar")){
-        navbar.classList.remove("mobilenavbar");
-    }
+    // if (navbar.classList.contains("mobilenavbar")){
+    //     navbar.classList.remove("mobilenavbar");
+    //     cross.classList.remove('show');
+    // }
 }
 
 function upArrowDisplay() {
@@ -44,7 +50,7 @@ function upArrowDisplay() {
 }
 
 function navbarlinksActive() {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 200;
     navbarlinks.forEach(navbarlink => {
         if (!navbarlink.hash) return
         let section = select(navbarlink.hash)
